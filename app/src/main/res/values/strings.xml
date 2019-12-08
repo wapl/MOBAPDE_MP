@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MOBAPDE_MP</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="APIKEY">bz8qWfWys4l1JESARv71uexmgDyOEvsR</string>
 </resources>

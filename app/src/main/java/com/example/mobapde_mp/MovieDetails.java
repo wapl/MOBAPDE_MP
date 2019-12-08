@@ -8,14 +8,18 @@ import android.widget.TextView;
 
 import com.androdocs.httprequest.HttpRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class MovieDetails extends AppCompatActivity {
     TextView txtTitle;
     TextView txtPlot;
     String Title="Mr+Bean";
     String api="48adfd0c";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,7 @@ public class MovieDetails extends AppCompatActivity {
                 String title=jsonObj.getString("Title");
                 txtTitle.setText(title);
                 txtPlot.setText(plot);
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
