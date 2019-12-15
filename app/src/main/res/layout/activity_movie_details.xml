@@ -6,21 +6,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MovieDetails" >
+    style="?android:attr/ratingBarStyleSmall"
+    <ImageView
+
+        android:id="@+id/moviePoster"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/movieTitle"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="wrap_content"
         android:textSize="30sp" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RatingBar
+
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:isScrollContainer="false"
+        android:max="10"
+        android:numStars="10"
+
+        />
 
     <TextView
         android:id="@+id/txtPlot"
         android:layout_width="match_parent"
-        android:layout_height="328dp" />
-
-    <TextView
-        android:id="@+id/txtSeats"
-        android:layout_width="match_parent"
-        android:layout_height="62dp" />
+        android:layout_height="129dp"
+        tools:text="Not Available " />
 
 </LinearLayout>

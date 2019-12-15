@@ -85,7 +85,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         || actionId == EditorInfo.IME_ACTION_DONE
                         || event.getAction() == KeyEvent.ACTION_DOWN
                         || event.getAction() == KeyEvent.KEYCODE_ENTER){
-
+                    inRange.clear();
                     //execute our method for searching
                     geoLocate();
                 }
@@ -154,6 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Intent intent =new Intent(this,movielist.class);
             intent.putExtra("CINEMAID",cinema.getCinemaID());
             intent.putExtra("NAME",cinema.getName());
+
             startActivity(intent);
         }
 
@@ -185,7 +186,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     JSONObject jsonObj = new JSONObject(result);
                     Log.d(TAG, String.valueOf(jsonObj));
                     JSONArray jsonCInemas=jsonObj.getJSONArray("cinemas");
-                    inRange.clear();
+
                     Marker marker;
                     for(int i=0;i<jsonCInemas.length();i++)
                     {
