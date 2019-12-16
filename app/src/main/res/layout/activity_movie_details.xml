@@ -42,7 +42,25 @@
     <TextView
         android:id="@+id/txtPlot"
         android:layout_width="match_parent"
-        android:layout_height="129dp"
+        android:layout_height="83dp"
         tools:text="Not Available " />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seats:" />
+
+    <TextView
+        android:id="@+id/txtSeats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="50" />
+
+    <Button
+        android:id="@+id/btnReserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reserve" />
 
 </LinearLayout>
